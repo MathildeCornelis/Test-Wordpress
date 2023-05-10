@@ -14,5 +14,19 @@ function montheme_register_assets()
     wp_enqueue_style('tailwind');
 };
 
+function montheme_title($title)
+{
+    return 'Salut';
+}
+
+function montheme_document_title_parts($title)
+{
+    $title['tagline'] = 'Salut';
+    return $title;
+}
+
+
 add_action('after_setup_theme', 'montheme_supports');
 add_action('wp_enqueue_scripts', 'montheme_register_assets');
+add_filter('wp_title', 'montheme_title');
+add_filter('document_title_parts', 'montheme_document_title_parts');
