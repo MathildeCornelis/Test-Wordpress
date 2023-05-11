@@ -32,3 +32,4 @@ add_action('wp_head', function () {
 });
 
 add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
